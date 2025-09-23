@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords"
+    content="VetPet, clinic, veterinary, pets, animals, dog, cat, appointments, exams, scheduling">
+  <meta name="description" content="VetPet - caring for your pet with love and professionalism">
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="./js/script.js" defer></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>VetPet Clinic</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md fixed-top custom-header header-text-white">
+      <div class="container">
+        <a class="navbar-brand" href="#"><i class="ph ph-paw-print"></i>
+          <div><strong>Vet</strong>Pet</div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <i class="ph ph-list"></i>
+        </button>
+        <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <i class="ph ph-paw-print"></i><strong>Vet</strong>Pet
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/consultas.html">Appointments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/especialidades.html">Specialties</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/exames.html">Exams</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div>
+      <img class="hero-img" id="hero-image" src="./assets/hero-img1.jpg" alt="Doctor examining a sick dog">
+      <div class="button-change-image-container">
+        <div class="radio-container">
+          <label for="radio1">
+            <input type="radio" onclick="changeImage('image1')" name="radio-carousel" id="radio1" checked>
+            <div class="custom-radio"></div>
+          </label>
+        </div>
+        <div class="radio-container">
+          <label for="radio2">
+            <input type="radio" onclick="changeImage('image2')" name="radio-carousel" id="radio2">
+            <div class="custom-radio"></div>
+          </label>
+        </div>
+        <div class="radio-container">
+          <label for="radio3">
+            <input type="radio" onclick="changeImage('image3')" name="radio-carousel" id="radio3">
+            <div class="custom-radio"></div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="container">
+      <div class="container-welcome">
+        <h1>Welcome to <strong>VetPet</strong> - Caring for your pet with love and professionalism!</h1>
+        <p>
+          Welcome to our clinic, the place where your pet’s health and care are our top priorities. Here, we are
+          dedicated to providing high-quality and compassionate veterinary care to ensure the well-being of your beloved
+          animals.
+        </p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="cards">
+        <div class="card card-custom">
+          <img src="./assets/img-gatinho.png" class="card-img-top card-image card-image-custom"
+            alt="Striped kitten image">
+          <div class="card-body">
+            <strong class="card-title card-title-custom">Cats</strong>
+            <p class="card-text card-text-custom">We have the best treatment for cats!</p>
+            <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal"
+              data-bs-target="#modal-gatos">
+              Learn more
+            </button>
+          </div>
+        </div>
+
+        <div class="card card-custom">
+          <img src="./assets/img-cachorro.png" class="card-img-top card-image card-image-custom"
+            alt="Caramel dog image">
+          <div class="card-body">
+            <strong class="card-title card-title-custom">Dogs</strong>
+            <p class="card-text card-text-custom">We love all our four-legged friends!</p>
+            <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal"
+              data-bs-target="#modal-cachorros">
+              Learn more
+            </button>
+          </div>
+        </div>
+
+        <div class="card card-custom">
+          <img src="./assets/img-ratinho.png" class="card-img-top card-image card-image-custom"
+            alt="Gray hamster image">
+          <div class="card-body card-body-custom">
+            <strong class="card-title card-title-custom">Rodents</strong>
+            <p class="card-text card-text-custom">The best care for your little ones!</p>
+            <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal"
+              data-bs-target="#modal-roedores">
+              Learn more
+            </button>
+          </div>
+        </div>
+
+        <div class="card card-custom">
+          <img src="./assets/img-tartaruga-nova.png" class="card-img-top card-image card-image-custom"
+            alt="Cute turtle image">
+          <div class="card-body">
+            <strong class="card-title card-title-custom">Reptiles</strong>
+            <p class="card-text card-text-custom">Your reptiles deserve all the care!</p>
+            <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal"
+              data-bs-target="#modal-repteis" id="teste">
+              Learn more
+            </button>
+          </div>
+        </div>
+
+        <!-- Cats Modal -->
+        <div class="modal fade" id="modal-gatos" tabindex="-1"
+          aria-labelledby="Modal about cat treatment at VetPet" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content modal-content-custom">
+              <div class="modal-header modal-header-custom">
+                <h2 class="modal-title modal-title-custom">Cat Treatment</h2>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body custom-modal-body">
+                <div class="modal-img-container">
+                  <img src="./assets/img-gatinho.png"
+                    class="card-img-top  card-image card-image-custom card-image-modal"
+                    alt="Striped kitten image">
+                </div>
+                <h3 class="modal-subtitle">Our cat care</h3>
+                <p class="modal-paragraph">In our welcoming environment, we offer specialized veterinary
+                  consultations, vaccinations, and preventive care to ensure the well-being of cats. With dedicated
+                  professionals and modern facilities, we provide personalized care for each kitty. At VetPet, we
+                  believe that a healthy cat is a happy cat, and we strive to provide the very best in veterinary
+                  services, ensuring peace of mind for owners and a full life for their beloved felines.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dogs Modal -->
+        <div class="modal fade" id="modal-cachorros" tabindex="-1"
+          aria-labelledby="Modal about dog treatment at VetPet" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content modal-content-custom">
+              <div class="modal-header modal-header-custom">
+                <h2 class="modal-title modal-title-custom">Dog Treatment</h2>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body custom-modal-body">
+                <div class="modal-img-container">
+                  <img src="./assets/img-cachorro.png" class="card-img-top card-image card-image-custom"
+                    alt="Dog image">
+                </div>
+                <h3 class="modal-subtitle">Our dog care</h3>
+                <p class="modal-paragraph">Here, we offer specialized veterinary consultations, vaccinations, and
+                  preventive protocols to ensure the well-being of every dog. Our team of professionals is committed to
+                  providing attentive and personalized care, using modern facilities to take care of your furry
+                  friends. At VetPet, we believe that healthy dogs are happy dogs, and we strive to deliver excellent
+                  veterinary services, giving owners peace of mind and their loyal friends a fulfilling life.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rodents Modal -->
+        <div class="modal fade" id="modal-roedores" tabindex="-1"
+          aria-labelledby="Modal about rodent treatment at VetPet" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content modal-content-custom">
+              <div class="modal-header modal-header-custom">
+                <h2 class="modal-title modal-title-custom">Rodent Treatment</h2>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body custom-modal-body">
+                <div class="modal-img-container">
+                  <img src="./assets/img-ratinho.png" class="card-img-top card-image card-image-custom"
+                    alt="Gray hamster image">
+                </div>
+                <h3 class="modal-subtitle">Our rodent care</h3>
+                <p class="modal-paragraph">In our welcoming environment, we offer veterinary consultations,
+                  preventive care, and guidance specifically for rodents. Our experienced team understands the unique
+                  needs of each rodent, providing personalized attention to ensure their well-being. At VetPet, we know
+                  healthy rodents are happy rodents, and we work hard to deliver outstanding veterinary services,
+                  ensuring owners feel confident their little friends are receiving the best care possible.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reptiles Modal -->
+        <div class="modal fade" id="modal-repteis" tabindex="-1"
+          aria-labelledby="Modal about reptile treatment at VetPet" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-custom">
+                <h2 class="modal-title modal-title-custom">Reptile Treatment</h2>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body custom-modal-body">
+                <div class="modal-img-container">
+                  <img src="./assets/img-tartaruga-nova.png" class="card-img-top card-image card-image-custom"
+                    alt="Cute turtle image">
+                </div>
+                <h3 class="modal-subtitle">Our reptile care</h3>
+                <p class="modal-paragraph">Here, we provide veterinary consultations tailored to your reptile’s unique
+                  needs, with preventive care and guidance to promote health and well-being. Our team, experienced in
+                  exotic animals, is ready to provide personalized care with modern facilities and specific resources
+                  for reptiles. At VetPet, we understand the uniqueness of every species and are dedicated to delivering
+                  exceptional veterinary care, ensuring peace of mind for owners and the best treatment for their
+                  fascinating scaly friends.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="container section-about-us">
+      <div class="container">
+        <div class="about-us-container">
+          <img src="assets/image-sabout.avif" alt="Woman measuring a dog's heartbeat with a stethoscope">
+          <div class="about-us-info">
+            <h2>About Us</h2>
+            <p>Our team of highly qualified veterinarians is passionate about animals and committed to offering
+              specialized services to meet the individual needs of each patient. Whether for routine appointments,
+              medical treatments, or surgeries, we are here to provide comprehensive and personalized care.
+            </p>
+            <button class="btn custom-button reset-link"><a href="./pages/especialidades.html">See more</a></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="container section-services">
+      <div class="div-services">
+        <h3>Our Advantages</h3>
+        <div class="cards-advantages">
+          <div class="cards-advantages-info">
+            <span class="rounded-circle card-advantage-circle">A</span>
+            <p>We have specialists in every area of veterinary care.</p>
+            <a href="#">Learn more <i class="ph ph-arrow-up-right"></i></a>
+          </div>
+          <div class="cards-advantages-info">
+            <span class="rounded-circle card-advantage-circle">B</span>
+            <p>We care with love for your best friend’s health.</p>
+            <a href="#">Learn more <i class="ph ph-arrow-up-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="our-services-info">
+        <h3>Our Services</h3>
+        <ul>
+          <li>Appointments.</li>
+          <li>Vaccinations.</li>
+          <li>Urine tests.</li>
+          <li>Blood tests.</li>
+          <li>Ultrasound.</li>
+          <li>X-ray.</li>
+          <li>And more.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Testimonials</h3>
+        <img src="./assets/image-avaliacao.webp" class="testimonials"
+          alt="Customer reviews of VetPet clinic">
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div class="footer-container">
+    <footer class="container">
+      <div>
+        <h3>Our Location</h3>
+        <iframe title="Clinic Address"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.408814811345!2d-51.20387612364745!3d-29.996415629052485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977775fc4c071%3A0x6de693cbd6b0b5e5!2sDBC!5e0!3m2!1spt-BR!2sbr!4v1705090856925!5m2!1spt-BR!2sbr"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <div class="footer-icons">
+        <h3>Contact Us</h3>
+        <p class="icon-custom"><i class="ph ph-house"></i>Tv. São José, 455 - Navegantes, Porto Alegre - RS</p>
+        <p class="icon-custom"><i class="ph ph-phone"></i>+55 (51) 9 9999-9999</p>
+        <p class="icon-custom"><i class="ph ph-envelope-simple"></i>petclinic@gmail.com</p>
+        <a href="#" aria-label="Our Twitter page"><i class="ph ph-twitter-logo"></i></a>
+        <a href="#" aria-label="Our Facebook page"><i class="ph ph-facebook-logo"></i></a>
+        <a href="#" aria-label="Our email"><i class="ph ph-google-logo"></i></a>
+      </div>
+
+      <div class="div-links">
+        <h3>Useful Links</h3>
+        <div><a href="https://www.petz.com.br/blog/banho-e-tosa/como-dar-banho-em-cachorro/">Do you know how to bathe a
+            dog? Learn now!</a></div>
+        <div><a
+            href="https://vetnil.com.br/blog/dermatite-atopica-em-caes-e-gatos-saiba-mais-sobre-essa-doenca-de-pele">Atopic
+            dermatitis in dogs and cats – learn more</a></div>
+        <div><a href="https://www.petz.com.br/blog/bem-estar/cachorro-precisa-passear/">Does a dog need to go for
+            walks? See why it’s important</a></div>
+        <div><a href="https://www.petz.com.br/blog/pets/gatos/o-que-fazer-para-o-gato-nao-arranhar-o-sofa/">What to do
+            if your cat scratches the sofa?</a></div>
+        <div><a href="https://www.petz.com.br/blog/pets/gatos/sexto-sentido-gato-some-quando-vai-morrer/">Cat sixth
+            sense: why do cats disappear before dying?</a></div>
+        <div><a href="https://www.petz.com.br/blog/pets/caes/como-brincar-com-cachorro-cego/">Discover how playing with
+            a blind dog can be fun!</a></div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
