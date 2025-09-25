@@ -1,6 +1,6 @@
 // Doctor list with WhatsApp numbers
 const medics = [
-  { specialty: "Cardiology", name: "Dr. Ahmed", phone: "923001111111" },
+  { specialty: "Cardiology", name: "Dr. Ahmed", phone: "923159239893" },
   { specialty: "Cardiology", name: "Dr. Sara", phone: "923002222222" },
   { specialty: "General Practitioner", name: "Dr. Ali", phone: "923139697188" },
   { specialty: "Nutritionist", name: "Dr. Fatima", phone: "923004444444" },
