@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Pets & Herd Clinic doctors page" />
+  <title>Clinic Doctors | Pets & Herd</title>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/doctors.css">
+  <style>
+    .doctors-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .doctor-card {
+      text-align: center;
+      padding: 1rem;
+      border-radius: 12px;
+      background-color: var(--card-bg, #f8f9fa);
+      color: var(--text-color, #222);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .doctor-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .doctor-card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid var(--primary-color, #77865d);
+    }
+
+    .doctor-card h5 {
+      color: var(--primary-color, #77865d);
+      margin-bottom: 0.3rem;
+    }
+
+    .doctor-card p {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .doctor-card button {
+      margin-top: 0.5rem;
+      background-color: var(--primary-color, #77865d);
+      border-color: var(--primary-color, #77865d);
+    }
+
+    .page-title {
+      text-align: center;
+      margin-top: 6rem;
+      color: var(--primary-color, #77865d);
+    }
+
+    .footer-container {
+      margin-top: 4rem;
+      background-color: #77865d;
+      color: #fff;
+      padding: 2rem 0;
+    }
+
+    .footer-container h3 {
+      color: #fff;
+    }
+
+    .footer-container p,
+    .footer-container a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-container a:hover {
+      color: #222;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-md fixed-top custom-header header-text-white">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <i class="ph ph-paw-print"></i>
+          <div><strong>Pets</strong> & Herd Clinic</div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <i class="ph ph-list"></i>
+        </button>
+        <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="offcanvasNavbar">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">
+              <i class="ph ph-paw-print"></i><strong>Pets</strong> & Herd Clinic
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="../pages/consultations.html">Appointments</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="container">
+    <h1 class="page-title">Meet Our Doctors</h1>
+    <div class="doctors-container">
+      <!-- Existing doctors -->
+      <div class="doctor-card">
+        <img src="../assets/doctors/dr_ahmed.jpg" alt="Dr. Ahmed">
+        <h5>Dr. Ahmed</h5>
+        <p>Cardiology</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#drAhmedModal">See
+          More</button>
+      </div>
+
+      <div class="doctor-card">
+        <img src="../assets/doctors/dr_sara.jpg" alt="Dr. Sara">
+        <h5>Dr. Sara</h5>
+        <p>Cardiology</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#drSaraModal">See
+          More</button>
+      </div>
+
+      <div class="doctor-card">
+        <img src="../assets/doctors/dr_ali.jpg" alt="Dr. Ali">
+        <h5>Dr. Ali</h5>
+        <p>General Practitioner</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#drAliModal">See
+          More</button>
+      </div>
+
+      <!-- Extra doctors (placeholder modals ready) -->
+      <div class="doctor-card">
+        <img src="../assets/doctors/dr_fatima.jpg" alt="Dr. Fatima">
+        <h5>Dr. Fatima</h5>
+        <p>Dermatology</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#drFatimaModal">See
+          More</button>
+      </div>
+
+      <div class="doctor-card">
+        <img src="../assets/doctors/dr_hassan.jpg" alt="Dr. Hassan">
+        <h5>Dr. Hassan</h5>
+        <p>Orthopedics</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#drHassanModal">See
+          More</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Modals -->
+  <div class="modal fade" id="drAhmedModal" tabindex="-1" aria-labelledby="drAhmedLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header modal-header-custom">
+          <h5 class="modal-title" id="drAhmedLabel">Dr. Ahmed - Cardiology</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Dr. Ahmed specializes in veterinary cardiology, treating heart conditions and promoting cardiovascular health
+          for pets.
+          <br><strong>Experience:</strong> 10 years
+          <br><strong>Languages:</strong> English, Urdu
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" onclick="selectDoctor('Dr. Ahmed', '923001111111')">Select
+            Doctor</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="drSaraModal" tabindex="-1" aria-labelledby="drSaraLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header modal-header-custom">
+          <h5 class="modal-title" id="drSaraLabel">Dr. Sara - Cardiology</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Info about Dr. Sara goes here.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" onclick="selectDoctor('Dr. Sara', '923001111112')">Select
+            Doctor</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="drAliModal" tabindex="-1" aria-labelledby="drAliLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header modal-header-custom">
+          <h5 class="modal-title" id="drAliLabel">Dr. Ali - General Practitioner</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Info about Dr. Ali goes here.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" onclick="selectDoctor('Dr. Ali', '923001111113')">Select
+            Doctor</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Extra doctor modals -->
+  <div class="modal fade" id="drFatimaModal" tabindex="-1" aria-labelledby="drFatimaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header modal-header-custom">
+          <h5 class="modal-title" id="drFatimaLabel">Dr. Fatima - Dermatology</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Info about Dr. Fatima goes here.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" onclick="selectDoctor('Dr. Fatima', '923001111114')">Select
+            Doctor</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="drHassanModal" tabindex="-1" aria-labelledby="drHassanLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header modal-header-custom">
+          <h5 class="modal-title" id="drHassanLabel">Dr. Hassan - Orthopedics</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Info about Dr. Hassan goes here.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" onclick="selectDoctor('Dr. Hassan', '923001111115')">Select
+            Doctor</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-container">
+    <footer class="container d-flex flex-wrap justify-content-between align-items-start">
+      <div class="mb-3" style="flex: 1; min-width: 300px; margin-right: 2rem;">
+        <h3>Our Location</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28868.958865208784!2d71.403005!3d34.031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d9114a70127357%3A0x8175ea87af766f29!2sPETS%20%26%20HERD%20CLINIC!5e0!3m2!1sen!2s!4v1758700000000!5m2!1sen!2s"
+          allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="footer-icons" style="flex: 1; min-width: 250px;">
+        <h3>Get in touch</h3>
+        <p class="icon-custom"><i class="ph ph-house"></i> Khalil Plaza, Nasir Bagh Rd, Askari 6, Peshawar</p>
+        <p class="icon-custom"><i class="ph ph-phone"></i> +92 315 9239893</p>
+        <a href="#" style="color: #fff; margin-right: 0.5rem;"><i class="ph ph-twitter-logo"></i></a>
+        <a href="#" style="color: #fff; margin-right: 0.5rem;"><i class="ph ph-facebook-logo"></i></a>
+        <a href="#" style="color: #fff;"><i class="ph ph-google-logo"></i></a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function selectDoctor(name, phone) {
+      const message = `Hello ${name}, I want to schedule an appointment.`;
+      const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, "_blank");
+    }
+  </script>
+</body>
+
+</html>
