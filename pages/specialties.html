@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Pets & Herd Clinic doctors page" />
-  <title>Clinic Doctors | Pets & Herd</title>
+  <title>Clinic Doctors & Staff | Pets & Herd</title>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../css/global.css">
@@ -129,82 +129,185 @@
 
   <!-- Main -->
   <main class="container">
-    <h1 class="page-title">Meet Our Doctors</h1>
+    <h1 class="page-title">Meet Our Doctors & Staff</h1>
     <div class="doctors-container">
-      <!-- Only Dr. Ahmed -->
+      <!-- Dr. Ahmad -->
       <div class="doctor-card">
         <img src="../assets/doctors/dr_ahmed.jpg" alt="Dr. Muhammad Ahmad">
-        <h5>Dr. Muhammad Ahmed</h5>
+        <h5>Dr. Muhammad Ahmad</h5>
         <p>Veterinary Surgeon & Physician</p>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#drAhmedModal">See
           More</button>
       </div>
 
-      <!--
+      <!-- Javeed -->
       <div class="doctor-card">
-        <img src="../assets/doctors/dr_sara.jpg" alt="Dr. Sara">
-        <h5>Dr. Sara</h5>
-        <p>Surgeon</p>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#drSaraModal">See
+        <img src="../assets/doctors/va_javeed.jpg" alt="VA Javeed Anwar">
+        <h5>VA Javeed Anwar</h5>
+        <p>Veterinary Assistant (VTH, AUP)</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#vaJaveedModal">See
           More</button>
       </div>
 
+      <!-- SAMPLE DOCTORS (COMMENTED OUT) -->
+      <!--
       <div class="doctor-card">
         <img src="../assets/doctors/dr_ali.jpg" alt="Dr. Ali">
         <h5>Dr. Ali</h5>
         <p>General Practitioner</p>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#drAliModal">See
-          More</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#drAliModal">See More</button>
       </div>
 
       <div class="doctor-card">
         <img src="../assets/doctors/dr_fatima.jpg" alt="Dr. Fatima">
         <h5>Dr. Fatima</h5>
-        <p>Dermatology</p>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#drFatimaModal">See
-          More</button>
+        <p>Dermatologist</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#drFatimaModal">See More</button>
       </div>
 
       <div class="doctor-card">
         <img src="../assets/doctors/dr_hassan.jpg" alt="Dr. Hassan">
         <h5>Dr. Hassan</h5>
-        <p>Orthopedics</p>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#drHassanModal">See
-          More</button>
+        <p>Orthopedic Specialist</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#drHassanModal">See More</button>
       </div>
       -->
     </div>
   </main>
 
-  <!-- Only Dr. Ahmed Modal -->
+  <!-- Dr. Ahmad Modal -->
   <div class="modal fade" id="drAhmedModal" tabindex="-1" aria-labelledby="drAhmedLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header modal-header-custom">
-          <h5 class="modal-title" id="drAhmedLabel">Dr. Muhammad Ahmed</h5>
+          <h5 class="modal-title" id="drAhmedLabel">Dr. Muhammad Ahmad</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-  <strong>Dr. Muhammad Ahmad</strong><br>
-  Veterinary Surgeon & Physician | Veterinary Officer (L&DD, KPK)
-  <br><br>
-  <strong>Qualifications:</strong>
-  <ul style="padding-left: 1.2rem; margin: 0.5rem 0;">
-    <li>DVM – Army University of Peshawar (AUP)</li>
-    <li>MPhil in Veterinary Surgery – University of Veterinary and Animal Sciences (UVAS), Lahore</li>
-    <li>RVMP – Pakistan Veterinary Medical Council (PVMC), Islamabad</li>
-  </ul>
-  <!-- <strong>Experience:</strong> 10 years -->
-  <br><strong>Languages:</strong> English, Urdu
-</div>
-<div class="modal-footer">
-  <button type="button" class="btn btn-success" onclick="selectDoctor('Dr. Muhammad Ahmad', '923159239893')">Select Doctor</button>
-  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-</div>
-
+          <strong>Dr. Muhammad Ahmad</strong><br>
+          Veterinary Surgeon & Physician | Veterinary Officer (L&DD, KPK)
+          <br><br>
+          <strong>Qualifications:</strong>
+          <ul style="padding-left: 1.2rem; margin: 0.5rem 0;">
+            <li>DVM – Agriculture University of Peshawar (AUP)</li>
+            <li>MPhil in Veterinary Surgery – UVAS, Lahore</li>
+            <li>RVMP – Pakistan Veterinary Medical Council (PVMC), Islamabad</li>
+          </ul>
+          <br><strong>Languages:</strong> English, Urdu
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" onclick="selectDoctor('Dr. Muhammad Ahmad', '923159239893')">Select Doctor</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
+
+  <!-- Javeed Modal -->
+  <div class="modal fade" id="vaJaveedModal" tabindex="-1" aria-labelledby="vaJaveedLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header modal-header-custom">
+          <h5 class="modal-title" id="vaJaveedLabel">VA Javeed Anwar</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <strong>VA Javeed Anwar</strong><br>
+          Veterinary Assistant (VTH, AUP)
+          <br><br>
+          <strong>Qualifications:</strong>
+          <ul style="padding-left: 1.2rem; margin: 0.5rem 0;">
+            <li>Certified Veterinary Assistant – Veterinary Teaching Hospital, Agriculture University of Peshawar (AUP)</li>
+          </ul>
+          <br><strong>Languages:</strong> English, Urdu, Pashto
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" onclick="selectDoctor('VA Javeed Anwar', '923009876543')">Select Doctor</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAMPLE MODALS (COMMENTED OUT) -->
+  <!--
+  <div class="modal fade" id="drAliModal" tabindex="-1" aria-labelledby="drAliLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header modal-header-custom">
+          <h5 class="modal-title" id="drAliLabel">Dr. Ali</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <strong>General Practitioner</strong><br>
+          Expert in preventive medicine and animal health.
+          <br><br>
+          <strong>Qualifications:</strong>
+          <ul style="padding-left: 1.2rem; margin: 0.5rem 0;">
+            <li>DVM – UVAS</li>
+          </ul>
+          <br><strong>Languages:</strong> English, Urdu
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" onclick="selectDoctor('Dr. Ali', '923001112222')">Select Doctor</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="drFatimaModal" tabindex="-1" aria-labelledby="drFatimaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header modal-header-custom">
+          <h5 class="modal-title" id="drFatimaLabel">Dr. Fatima</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <strong>Dermatologist</strong><br>
+          Specialist in skin diseases in pets and farm animals.
+          <br><br>
+          <strong>Qualifications:</strong>
+          <ul style="padding-left: 1.2rem; margin: 0.5rem 0;">
+            <li>DVM – AUP</li>
+            <li>Diploma in Veterinary Dermatology</li>
+          </ul>
+          <br><strong>Languages:</strong> English, Urdu
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" onclick="selectDoctor('Dr. Fatima', '923004445555')">Select Doctor</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="drHassanModal" tabindex="-1" aria-labelledby="drHassanLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header modal-header-custom">
+          <h5 class="modal-title" id="drHassanLabel">Dr. Hassan</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <strong>Orthopedic Specialist</strong><br>
+          Focused on animal bone, joint, and muscle health.
+          <br><br>
+          <strong>Qualifications:</strong>
+          <ul style="padding-left: 1.2rem; margin: 0.5rem 0;">
+            <li>DVM – UVAS</li>
+            <li>MS Veterinary Orthopedics</li>
+          </ul>
+          <br><strong>Languages:</strong> English, Urdu
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" onclick="selectDoctor('Dr. Hassan', '923007778889')">Select Doctor</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
 
   <!-- Footer -->
   <div class="footer-container">
