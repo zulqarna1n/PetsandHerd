@@ -131,19 +131,20 @@
   <main class="container">
     <h1 class="page-title">Meet Our Doctors</h1>
     <div class="doctors-container">
-      <!-- Existing doctors -->
+      <!-- Only Dr. Ahmed -->
       <div class="doctor-card">
-        <img src="../assets/doctors/dr_ahmed.jpg" alt="Dr. Ahmed">
-        <h5>Dr. Ahmed</h5>
-        <p>Cardiology</p>
+        <img src="../assets/doctors/dr_ahmed.jpg" alt="Dr. Muhammad Ahmad">
+        <h5>Dr. Muhammad Ahmed</h5>
+        <p>Veterinary Surgeon & Physician</p>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#drAhmedModal">See
           More</button>
       </div>
 
+      <!--
       <div class="doctor-card">
         <img src="../assets/doctors/dr_sara.jpg" alt="Dr. Sara">
         <h5>Dr. Sara</h5>
-        <p>Cardiology</p>
+        <p>Surgeon</p>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#drSaraModal">See
           More</button>
       </div>
@@ -156,7 +157,6 @@
           More</button>
       </div>
 
-      <!-- Extra doctors (placeholder modals ready) -->
       <div class="doctor-card">
         <img src="../assets/doctors/dr_fatima.jpg" alt="Dr. Fatima">
         <h5>Dr. Fatima</h5>
@@ -172,106 +172,36 @@
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#drHassanModal">See
           More</button>
       </div>
-
+      -->
     </div>
   </main>
 
-  <!-- Modals -->
+  <!-- Only Dr. Ahmed Modal -->
   <div class="modal fade" id="drAhmedModal" tabindex="-1" aria-labelledby="drAhmedLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header modal-header-custom">
-          <h5 class="modal-title" id="drAhmedLabel">Dr. Ahmed - Cardiology</h5>
+          <h5 class="modal-title" id="drAhmedLabel">Dr. Muhammad Ahmed</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          Dr. Ahmed specializes in veterinary cardiology, treating heart conditions and promoting cardiovascular health
-          for pets.
-          <br><strong>Experience:</strong> 10 years
-          <br><strong>Languages:</strong> English, Urdu
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success" onclick="selectDoctor('Dr. Ahmed', '923159239893')">Select
-            Doctor</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <strong>Dr. Muhammad Ahmad</strong><br>
+  Veterinary Surgeon & Physician | Veterinary Officer (L&DD, KPK)
+  <br><br>
+  <strong>Qualifications:</strong>
+  <ul style="padding-left: 1.2rem; margin: 0.5rem 0;">
+    <li>DVM – Army University of Peshawar (AUP)</li>
+    <li>MPhil in Veterinary Surgery – University of Veterinary and Animal Sciences (UVAS), Lahore</li>
+    <li>RVMP – Pakistan Veterinary Medical Council (PVMC), Islamabad</li>
+  </ul>
+  <!-- <strong>Experience:</strong> 10 years -->
+  <br><strong>Languages:</strong> English, Urdu
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-success" onclick="selectDoctor('Dr. Muhammad Ahmad', '923159239893')">Select Doctor</button>
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+</div>
 
-  <div class="modal fade" id="drSaraModal" tabindex="-1" aria-labelledby="drSaraLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header modal-header-custom">
-          <h5 class="modal-title" id="drSaraLabel">Dr. Sara - Cardiology</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          Info about Dr. Sara goes here.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success" onclick="selectDoctor('Dr. Sara', '923001111112')">Select
-            Doctor</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="drAliModal" tabindex="-1" aria-labelledby="drAliLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header modal-header-custom">
-          <h5 class="modal-title" id="drAliLabel">Dr. Ali - General Practitioner</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          Info about Dr. Ali goes here.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success" onclick="selectDoctor('Dr. Ali', '923001111113')">Select
-            Doctor</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Extra doctor modals -->
-  <div class="modal fade" id="drFatimaModal" tabindex="-1" aria-labelledby="drFatimaLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header modal-header-custom">
-          <h5 class="modal-title" id="drFatimaLabel">Dr. Fatima - Dermatology</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          Info about Dr. Fatima goes here.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success" onclick="selectDoctor('Dr. Fatima', '923001111114')">Select
-            Doctor</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="drHassanModal" tabindex="-1" aria-labelledby="drHassanLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header modal-header-custom">
-          <h5 class="modal-title" id="drHassanLabel">Dr. Hassan - Orthopedics</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          Info about Dr. Hassan goes here.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success" onclick="selectDoctor('Dr. Hassan', '923001111115')">Select
-            Doctor</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
       </div>
     </div>
   </div>
@@ -289,6 +219,7 @@
         <h3>Get in touch</h3>
         <p class="icon-custom"><i class="ph ph-house"></i> Khalil Plaza, Nasir Bagh Rd, Askari 6, Peshawar</p>
         <p class="icon-custom"><i class="ph ph-phone"></i> +92 315 9239893</p>
+        <p class="icon-custom"><i class="ph ph-phone"></i>+92 335 9170069</p>
         <a href="#" style="color: #fff; margin-right: 0.5rem;"><i class="ph ph-twitter-logo"></i></a>
         <a href="#" style="color: #fff; margin-right: 0.5rem;"><i class="ph ph-facebook-logo"></i></a>
         <a href="#" style="color: #fff;"><i class="ph ph-google-logo"></i></a>
